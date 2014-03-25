@@ -1,14 +1,5 @@
-```html
-<h2>Example of code</h2>
+Hallo High Potential
 
-<pre>
-    <div class="container">
-        <div class="block two first">
-            <h2>Your title</h2>
-            <div class="wrap">
-            //Your content
-            </div>
-        </div>
-    </div>
-</pre>
-```
+Lekker programmeren met je bekkie in python
+
+Groetjes aan wesley
