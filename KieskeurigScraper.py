@@ -27,6 +27,8 @@ with open(json_file, 'a', 1, encoding='utf8') as output_file:
         head, sep, tail = text.partition(' kopen?')
 
         print(head)
+
+        prijsArr = [] 
               
         # Output all prices
         for price in sAll:
@@ -34,5 +36,15 @@ with open(json_file, 'a', 1, encoding='utf8') as output_file:
                     p = child.string
                     prijs = p[19:]
 
-                    print(prijs)
+                    # Convert strings to price only 
+                    if prijs.find(',') > 0:
+                        end = prijs.find(',')+3
+                        prijsInt= prijs[:end]
+                        
+                        prijsArr.append(prijsInt)
+
+        print(prijsArr[0:3])
+
+                        
+
 
