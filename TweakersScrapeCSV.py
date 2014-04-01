@@ -5,6 +5,7 @@ import requests
 import popularityToDB
 
 
+
 categories={"Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/producten/", "Tablets":
     "http://tweakers.net/categorie/822/tablets/producten/", "Laptops":
     "http://tweakers.net/categorie/496/laptops/producten/"}
@@ -61,5 +62,8 @@ for key, url in categories.items():
     #calls function
     toplst_products()
     print(itemList)
+
+    popularityToDB.importToDB(itemList)
+
 
 
