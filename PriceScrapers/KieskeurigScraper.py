@@ -1,15 +1,19 @@
 from bs4 import BeautifulSoup
-import json
 import requests
+
+from PriceScrapers import priceToDB
+
 
 json_file = 'output.json'
 
 # List of products to be scraped
 products = [
     'http://www.kieskeurig.nl/mobiel/gsm/samsung/galaxy-s4-i9505-zwart/prijzen/1174247',
-    'http://www.kieskeurig.nl/mobiel/gsm/samsung/galaxy-s4-i9505-zwart/prijzen/1174247',
+    'http://www.kieskeurig.nl/mobiel/gsm/huawei/ascend-p6-zwart/prijzen/1343690',
     ]
 
+
+itemList = []
 
 with open(json_file, 'a', 1, encoding='utf8') as output_file:
     
@@ -26,9 +30,8 @@ with open(json_file, 'a', 1, encoding='utf8') as output_file:
         text = soup.title.text
         head, sep, tail = text.partition(' kopen?')
 
-        print(head)
 
-        prijsArr = [] 
+        prijsArr = [head]
               
         # Output all prices
         for price in sAll:
@@ -43,7 +46,15 @@ with open(json_file, 'a', 1, encoding='utf8') as output_file:
                         
                         prijsArr.append(prijsInt)
 
-        print(prijsArr[0:3])
+        priceList = prijsArr[0:4]
+        priceList.append('Kieskeurig')
+
+        itemList.append(priceList)
+
+    print(itemList)
+    priceToDB.priceToDB(itemList)
+
+
 
                         
 
