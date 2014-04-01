@@ -10,17 +10,6 @@ categories={"Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/produc
     "http://tweakers.net/categorie/822/tablets/producten/", "Laptops":
     "http://tweakers.net/categorie/496/laptops/producten/"}
 
-popdata=open('popularity.csv', 'w', newline='')
-
-popularitywriter=csv.writer(popdata, delimiter=' ', quotechar=',', quoting=csv.QUOTE_MINIMAL)
-
-popularitywriter.writerow([])
-
-for category in categories.keys():
-    popularitywriter.writerow([category])
-
-
-
 #scrapes HTML from webpage
 for key, url in categories.items():
 
