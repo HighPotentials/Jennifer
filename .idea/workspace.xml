@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3a0a4522-1227-454f-b8a1-3f2d59f44a25" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BolScraper.py" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/PriceScrapers/TweakerScraper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/PopularityScrapers/BolScraper.py" afterPath="$PROJECT_DIR$/PopularityScrapers/BolScraper.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="jennifer.iws" />
@@ -25,7 +26,68 @@
     <favorites_list name="jennifer" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="BolScraper.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PopularityScrapers/BolScraper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="840">
+              <folding>
+                <element signature="e#22#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="database.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="12" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="KieskeurigScraper.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PriceScrapers/KieskeurigScraper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="18" column="4" selection-start="0" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="990">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweakerScraper.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PriceScrapers/TweakerScraper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="37" column="0" selection-start="845" selection-end="845" vertical-scroll-proportion="1.3245823" vertical-offset="0" max-vertical-offset="990">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="priceToDB.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PriceScrapers/priceToDB.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="152" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TweakersScrapeCSV.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PopularityScrapers/TweakersScrapeCSV.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="960">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -48,6 +110,7 @@
         <option value="$PROJECT_DIR$/PopularityScrapers/TweakersScrapeCSV.py" />
         <option value="$PROJECT_DIR$/PriceScrapers/KieskeurigScraper.py" />
         <option value="$PROJECT_DIR$/PopularityScrapers/BolScraper.py" />
+        <option value="$PROJECT_DIR$/PriceScrapers/TweakerScraper.py" />
       </list>
     </option>
   </component>
@@ -264,25 +327,7 @@
       </UpdatedFiles>
     </UpdateInfo>
   </component>
-  <component name="RunManager" selected="Python.TweakersScrapeCSV">
-    <configuration default="false" name="TweakersScraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="jennifer" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TweakersScraper.py" />
-      <option name="PARAMETERS" value="" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Python.TweakerScraper">
     <configuration default="false" name="KieskeurigScraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -350,6 +395,24 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="jennifer" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PopularityScrapers/BolScraper.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="TweakerScraper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/PriceScrapers" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="jennifer" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/PriceScrapers/TweakerScraper.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -477,19 +540,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.TweakersScraper" />
-      <item index="1" class="java.lang.String" itemvalue="Python.KieskeurigScraper" />
-      <item index="2" class="java.lang.String" itemvalue="Python.TweakersScrapeCSV" />
-      <item index="3" class="java.lang.String" itemvalue="Python.popularityToDB" />
-      <item index="4" class="java.lang.String" itemvalue="Python.BolScraper" />
+      <item index="0" class="java.lang.String" itemvalue="Python.KieskeurigScraper" />
+      <item index="1" class="java.lang.String" itemvalue="Python.TweakersScrapeCSV" />
+      <item index="2" class="java.lang.String" itemvalue="Python.popularityToDB" />
+      <item index="3" class="java.lang.String" itemvalue="Python.BolScraper" />
+      <item index="4" class="java.lang.String" itemvalue="Python.TweakerScraper" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.TweakersScrapeCSV" />
+        <item index="0" class="java.lang.String" itemvalue="Python.TweakerScraper" />
         <item index="1" class="java.lang.String" itemvalue="Python.BolScraper" />
-        <item index="2" class="java.lang.String" itemvalue="Python.KieskeurigScraper" />
-        <item index="3" class="java.lang.String" itemvalue="Python.popularityToDB" />
-        <item index="4" class="java.lang.String" itemvalue="Python.TweakersScraper" />
+        <item index="2" class="java.lang.String" itemvalue="Python.TweakersScrapeCSV" />
+        <item index="3" class="java.lang.String" itemvalue="Python.KieskeurigScraper" />
+        <item index="4" class="java.lang.String" itemvalue="Python.popularityToDB" />
       </list>
     </recent_temporary>
   </component>
@@ -557,24 +620,28 @@
       <created>1396361432632</created>
       <updated>1396361432632</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Pricescrapers + popularityscrapers">
+      <created>1396362186068</created>
+      <updated>1396362186068</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1280" height="706" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939487" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32526475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32526475" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32980332" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -636,29 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PriceScrapers/KieskeurigScraper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="28" column="40" selection-start="681" selection-end="681" vertical-scroll-proportion="0.15384616" vertical-offset="356" max-vertical-offset="990">
-          <folding>
-            <element signature="e#0#29#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PriceScrapers/priceToDB.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="152" selection-start="402" selection-end="402" vertical-scroll-proportion="0.29776675" vertical-offset="0" max-vertical-offset="403">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/PopularityScrapers/TweakersScrapeCSV.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.18028846" vertical-offset="0" max-vertical-offset="960">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/PopularityScrapers/popularityToDB.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="25" selection-start="246" selection-end="246" vertical-scroll-proportion="0.33498758" vertical-offset="0" max-vertical-offset="405">
@@ -666,17 +710,51 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database.py">
+    <entry file="file://$PROJECT_DIR$/PopularityScrapers/BolScraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="11" selection-start="0" selection-end="413" vertical-scroll-proportion="0.40942928" vertical-offset="0" max-vertical-offset="403">
+        <state line="5" column="0" selection-start="91" selection-end="91" vertical-scroll-proportion="0.0" vertical-offset="421" max-vertical-offset="840">
+          <folding>
+            <element signature="e#22#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PopularityScrapers/TweakersScrapeCSV.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="0" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0" vertical-offset="316" max-vertical-offset="960">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PopularityScrapers/BolScraper.py">
+    <entry file="file://$PROJECT_DIR$/PriceScrapers/priceToDB.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="37" selection-start="1035" selection-end="1035" vertical-scroll-proportion="0.8918269" vertical-offset="244" max-vertical-offset="885">
+        <state line="8" column="152" selection-start="402" selection-end="402" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceScrapers/KieskeurigScraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="4" selection-start="0" selection-end="1413" vertical-scroll-proportion="0.0" vertical-offset="301" max-vertical-offset="990">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="12" selection-start="413" selection-end="413" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PriceScrapers/TweakerScraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="37" column="0" selection-start="845" selection-end="845" vertical-scroll-proportion="1.3245823" vertical-offset="0" max-vertical-offset="990">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
