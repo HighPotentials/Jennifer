@@ -2,6 +2,7 @@ __author__ = 'Alexander'
 from bs4 import BeautifulSoup
 import csv
 import requests
+import popularityToDB
 
 
 categories={"Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/producten/", "Tablets":
@@ -60,3 +61,5 @@ for key, url in categories.items():
     #calls function
     toplst_products()
     print(itemList)
+
+
