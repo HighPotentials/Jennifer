@@ -61,8 +61,8 @@ for key, url in categories.items():
 
     #calls function
     toplst_products()
-    print(itemList)
 
+    # Write to DB
     popularityToDB.importToDB(itemList)
 
 
