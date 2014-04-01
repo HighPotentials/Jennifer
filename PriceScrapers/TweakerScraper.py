@@ -1,57 +1,61 @@
 from bs4 import BeautifulSoup
 import requests
-
+import Google
 from PriceScrapers import priceToDB
 
 
-json_file = 'output.json'
 
-# List of products to be scraped
-products = [
-    'http://tweakers.net/pricewatch/325799/samsung-galaxy-s4-16gb-zwart.html',
-    'http://tweakers.net/pricewatch/355003/motorola-moto-g-8gb-zwart.html'
-    ]
+keywords = [
+    'iphone 4s tweakers pricewatch',
+    'htc one 32gb tweakers pricewatch'
+]
+
+products = []
+for keyword in keywords:
+    link = Google.getLink(keyword)
+    products.append(link)
+
 
 
 itemList = []
 
-with open(json_file, 'a', 1, encoding='utf8') as output_file:
+
     
-    # Loop array
-    for product in products:
-        
-        r=requests.get(product)
-        pageHTML=r.text
-        soup=BeautifulSoup("".join(pageHTML))
-        sAll=soup.findAll("tr", { "class" : "total" })
+# Loop array
+for product in products:
 
-        
-        # Scrape product name from title
-        text = soup.title.text
-        head, sep, tail = text.partition('&euro;')
+    r=requests.get(product)
+    pageHTML=r.text
+    soup=BeautifulSoup("".join(pageHTML))
+    sAll=soup.findAll("tr", { "class" : "total" })
 
 
-        prijsArr = [head]
-              
-        # Output all prices
-        for price in sAll:
+    # Scrape product name from title
+    text = soup.title.text
+    head, sep, tail = text.partition('&euro;')
 
-            price = str(price)
-            price = price[48:]
-            price = price.split("<")[0]
-            price = price.replace(",-", "")
-            price = price.replace(",", ".")
 
-            prijsArr.append(price)
+    prijsArr = [head]
 
-        priceList = prijsArr[0:4]
-        priceList.append('Tweakers')
+    # Output all prices
+    for price in sAll:
 
-        # print(priceList)
+        price = str(price)
+        price = price[48:]
+        price = price.split("<")[0]
+        price = price.replace(",-", "")
+        price = price.replace(",", ".")
 
-        itemList.append(priceList)
+        prijsArr.append(price)
 
-    priceToDB.priceToDB(itemList)
+    priceList = prijsArr[0:4]
+    priceList.append('Tweakers')
+
+    # print(priceList)
+
+    itemList.append(priceList)
+
+priceToDB.priceToDB(itemList)
 
 
 

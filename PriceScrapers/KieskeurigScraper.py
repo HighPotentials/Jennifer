@@ -1,57 +1,58 @@
 from bs4 import BeautifulSoup
 import requests
-
+import Google
 from PriceScrapers import priceToDB
 
 
-json_file = 'output.json'
+keywords = [
+    'iphone 5s kieskeurig',
+    'htc one zilver kieskeurig'
+]
 
-# List of products to be scraped
-products = [
-    'http://www.kieskeurig.nl/mobiel/gsm/samsung/galaxy-s4-i9505-zwart/prijzen/1174247',
-    'http://www.kieskeurig.nl/mobiel/gsm/huawei/ascend-p6-zwart/prijzen/1343690',
-    ]
+products = []
+for keyword in keywords:
+    link = Google.getLink(keyword)
+    products.append(link)
+
 
 
 itemList = []
-
-with open(json_file, 'a', 1, encoding='utf8') as output_file:
     
-    # Loop array
-    for product in products:
-        
-        r=requests.get(product)
-        pageHTML=r.text
-        soup=BeautifulSoup("".join(pageHTML))
-        sAll=soup.findAll("td", { "class" : "prijs" })
+# Loop array
+for product in products:
 
-        
-        # Scrape product name from title
-        text = soup.title.text
-        head, sep, tail = text.partition(' kopen?')
+    r=requests.get(product)
+    pageHTML=r.text
+    soup=BeautifulSoup("".join(pageHTML))
+    sAll=soup.findAll("td", { "class" : "prijs" })
 
 
-        prijsArr = [head]
-              
-        # Output all prices
-        for price in sAll:
-                for child in price:
-                    p = child.string
-                    prijs = p[19:]
+    # Scrape product name from title
+    text = soup.title.text
+    head, sep, tail = text.partition(' kopen?')
 
-                    # Convert strings to price only 
-                    if prijs.find(',') > 0:
-                        end = prijs.find(',')+3
-                        prijsInt= prijs[:end]
-                        
-                        prijsArr.append(prijsInt)
 
-        priceList = prijsArr[0:4]
-        priceList.append('Kieskeurig')
+    prijsArr = [head]
 
-        itemList.append(priceList)
+    # Output all prices
+    for price in sAll:
+            for child in price:
+                p = child.string
+                prijs = p[19:]
 
-    priceToDB.priceToDB(itemList)
+                # Convert strings to price only
+                if prijs.find(',') > 0:
+                    end = prijs.find(',')+3
+                    prijsInt= prijs[:end]
+
+                    prijsArr.append(prijsInt)
+
+    priceList = prijsArr[0:4]
+    priceList.append('Kieskeurig')
+
+    itemList.append(priceList)
+
+priceToDB.priceToDB(itemList)
 
 
 
