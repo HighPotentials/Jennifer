@@ -1,38 +1,54 @@
 __author__ = 'Wesley'
 from bs4 import BeautifulSoup
-import json
 import requests
+import popularityToDB
 
-#mobile
+
+
+categories={"Mobile":"http://goo.gl/BnN2Oh", "Tablets":
+    "http://goo.gl/uf8OEt", "Laptops":
+    "http://goo.gl/V2d0IN"}
 
 #scrapes HTML from webpage
-r=requests.get("http://www.bol.com/nl/l/elektronica/bestverkochte-smartphones/N/4004/lijstid/22300019/index.html?promo=smartphones_303_HS-populairste-smartphones-131016-MM_B4_De%20populairste%20smartphones__")
-pageHTML=r.text
+for key, url in categories.items():
 
-#defines soup function
-soup=BeautifulSoup(r.text)
+    r=requests.get(url)
+    pageHTML=r.text
 
-#finds phone element on webpage
-phones=soup.findAll('div', attrs= {'class': 'product_line'})
+    #defines soup function
+    soup=BeautifulSoup(r.text)
+
+    #finds product element on webpage
+    products=soup.findAll('div', attrs= {'class': 'product_line'})
 
 
-#amount of phones to include in list
-z=5
+    #amount of products to include in list
+    x=5
+    #x is doubled due to website structure
+    z=int(x*2)
 
-#creates top x list of phones
-def toplst_phones():
-    #loops through list of phones
-    for phone in phones[0:z]:
-        #finds <a> elements
-        ps = phone.findAll('a')
-        #loops through <a> elements found in phone element
-        for link in ps:
-            #ensures that 'none' titles are not included
-            if link.get('title')==None:
-                break
-            else:
-                print(link.get('title'))
+    itemList = []
 
-#calls function
-toplst_phones()
-    
+    #creates top x list of products
+    def toplst_products():
+        y=0
+        #loops through list of products
+        for product in products[0:z]:
+            #finds <a> elements
+            ps = product.findAll('a')
+            #loops through <a> elements found in product element
+            for link in ps:
+                #ensures that 'none' titles are not included
+                if link.get('title')==None:
+                    break
+                else:
+                    # print(link.get('title'))
+                    y+=1
+                    itemList.append([link.get('title'), key, "Bol", y])
+
+
+    #calls function
+    toplst_products()
+    print(itemList)
+
+    popularityToDB.importToDB(itemList)
