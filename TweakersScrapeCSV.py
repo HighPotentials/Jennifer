@@ -1,17 +1,23 @@
 __author__ = 'Alexander'
 from bs4 import BeautifulSoup
-import json
+import csv
 import requests
 
 
-categories=["http://tweakers.net/categorie/215/mobiele-telefoons/producten/",
-            "http://tweakers.net/categorie/822/tablets/producten/",
-            "http://tweakers.net/categorie/496/laptops/producten/"]
+categories={"Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/producten/", "Tablets":
+    "http://tweakers.net/categorie/822/tablets/producten/", "Laptops":
+    "http://tweakers.net/categorie/496/laptops/producten/"}
 
+popdata=open('popularity.csv', 'w')
+
+popularitywriter=csv.writer(popdata, delimiter=' ', quotechar=',', quoting=csv.QUOTE_MINIMAL)
+
+for category in categories.keys():
+    print(category)
+    popularitywriter.writerow(category)
 
 #scrapes HTML from webpage
-for category in categories:
-    json_file='output_'+str(category) +".json"
+for category in categories.values():
 
     r=requests.get(category)
     pageHTML=r.text
@@ -41,7 +47,6 @@ for category in categories:
                     break
                 else:
                     print(link.get('title'))
-                    json.dump(link.get('title'), json_file, ensure_ascii=False)
-                    json_file.write('\n')
+
     #calls function
     toplst_products()
