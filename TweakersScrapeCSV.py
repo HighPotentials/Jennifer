@@ -18,6 +18,7 @@ for category in categories.keys():
     popularitywriter.writerow([category])
 
 
+
 #scrapes HTML from webpage
 for key, url in categories.items():
 
@@ -36,10 +37,11 @@ for key, url in categories.items():
     #x is doubled due to website structure
     z=int(x*2)
 
-    itemList = [];
+    itemList = []
 
     #creates top x list of products
     def toplst_products():
+        y=0
         #loops through list of products
         for product in products[0:z]:
             #finds <a> elements
@@ -51,7 +53,9 @@ for key, url in categories.items():
                     break
                 else:
                     # print(link.get('title'))
-                    itemList.append([link.get('title'), key, '1'])
+                    y+=1
+                    itemList.append([link.get('title'), key, "Tweakers", y])
+
 
     #calls function
     toplst_products()
