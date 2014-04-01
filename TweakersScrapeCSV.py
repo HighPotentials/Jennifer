@@ -1,6 +1,5 @@
 __author__ = 'Alexander'
 from bs4 import BeautifulSoup
-import csv
 import requests
 import popularityToDB
 
@@ -50,8 +49,8 @@ for key, url in categories.items():
 
     #calls function
     toplst_products()
+    print(itemList)
 
-    # Write to DB
     popularityToDB.importToDB(itemList)
 
 
