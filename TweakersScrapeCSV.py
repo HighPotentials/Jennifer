@@ -19,9 +19,9 @@ for category in categories.keys():
 
 
 #scrapes HTML from webpage
-for category in categories.values():
+for key, url in categories.items():
 
-    r=requests.get(category)
+    r=requests.get(url)
     pageHTML=r.text
 
     #defines soup function
@@ -36,6 +36,8 @@ for category in categories.values():
     #x is doubled due to website structure
     z=int(x*2)
 
+    itemList = [];
+
     #creates top x list of products
     def toplst_products():
         #loops through list of products
@@ -48,7 +50,9 @@ for category in categories.values():
                 if link.get('title')==None:
                     break
                 else:
-                    print(link.get('title'))
+                    # print(link.get('title'))
+                    itemList.append([link.get('title'), key, '1'])
 
     #calls function
     toplst_products()
+    print(itemList)

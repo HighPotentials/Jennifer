@@ -18,6 +18,5 @@ for item in itemList:
     # Invoeren records in DB
     cur.execute("INSERT INTO price VALUES (NULL ,  '" + item[0] + "',  '" + item[1] + "',  '" + item[2] + "',  '" + item[3] + "', '" + item[4] + "', CURDATE());");
 
-
 cur.close()
 conn.close()
