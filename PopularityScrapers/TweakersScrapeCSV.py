@@ -2,7 +2,6 @@ from PopularityScrapers import popularityToDB
 
 __author__ = 'Alexander'
 from bs4 import BeautifulSoup
-import csv
 import requests
 
 
@@ -11,17 +10,6 @@ categories={
     "Tablets": "http://tweakers.net/categorie/822/tablets/producten/",
     "Laptops": "http://tweakers.net/categorie/496/laptops/producten/"
 }
-
-popdata=open('popularity.csv', 'w', newline='')
-
-popularitywriter=csv.writer(popdata, delimiter=' ', quotechar=',', quoting=csv.QUOTE_MINIMAL)
-
-popularitywriter.writerow([])
-
-for category in categories.keys():
-    popularitywriter.writerow([category])
-
-
 
 #scrapes HTML from webpage
 for key, url in categories.items():
@@ -63,8 +51,8 @@ for key, url in categories.items():
 
     #calls function
     toplst_products()
+    print(itemList)
 
-    # Write to DB
     popularityToDB.importToDB(itemList)
 
 
