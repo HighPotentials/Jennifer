@@ -51,7 +51,6 @@ with open(json_file, 'a', 1, encoding='utf8') as output_file:
 
         itemList.append(priceList)
 
-    print(itemList)
     priceToDB.priceToDB(itemList)
 
 
