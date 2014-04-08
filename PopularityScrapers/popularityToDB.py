@@ -14,9 +14,23 @@ def importToDB(itemList):
 
 def show():
     #Ophalen van records
+    arr = [];
     cur.execute("SELECT * FROM popularity")
     for r in cur.fetchall():
-        print(r)
+        arr.append(r)
+
+    return(arr)
+
+def query(query):
+    #Ophalen van records
+    arr = [];
+    cur.execute(query)
+    for r in cur.fetchall():
+        arr.append(r)
+
+    return(arr)
+
+
 
 #cur.close()
 #conn.close()

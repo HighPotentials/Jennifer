@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import Google
-from PriceScrapers import priceToDB
+import priceToDB
 
 
 
@@ -55,6 +55,7 @@ for product in products:
 
     itemList.append(priceList)
 
+print(itemList)
 priceToDB.priceToDB(itemList)
 
 

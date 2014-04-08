@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import Google
-from PriceScrapers import priceToDB
+import priceToDB
 
 
 keywords = [
@@ -48,6 +48,10 @@ for product in products:
                     prijsArr.append(prijsInt)
 
     priceList = prijsArr[0:4]
+
+    if len(priceList) is 3:
+        priceList.append('0');
+
     priceList.append('Kieskeurig')
 
     itemList.append(priceList)
