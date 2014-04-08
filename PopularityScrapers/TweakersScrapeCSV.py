@@ -1,13 +1,15 @@
+from PopularityScrapers import popularityToDB
+
 __author__ = 'Alexander'
 from bs4 import BeautifulSoup
 import requests
-import popularityToDB
 
 
-
-categories={"Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/producten/", "Tablets":
-    "http://tweakers.net/categorie/822/tablets/producten/", "Laptops":
-    "http://tweakers.net/categorie/496/laptops/producten/"}
+categories={
+    "Mobile":"http://tweakers.net/categorie/215/mobiele-telefoons/producten/",
+    "Tablets": "http://tweakers.net/categorie/822/tablets/producten/",
+    "Laptops": "http://tweakers.net/categorie/496/laptops/producten/"
+}
 
 #scrapes HTML from webpage
 for key, url in categories.items():
@@ -49,7 +51,6 @@ for key, url in categories.items():
 
     #calls function
     toplst_products()
-    print(itemList)
 
     popularityToDB.importToDB(itemList)
 

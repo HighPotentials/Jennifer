@@ -23,9 +23,7 @@ for key, url in categories.items():
 
 
     #amount of products to include in list
-    x=5
-    #x is doubled due to website structure
-    z=int(x*2)
+    z=5
 
     itemList = []
 
@@ -49,6 +47,5 @@ for key, url in categories.items():
 
     #calls function
     toplst_products()
-    print(itemList)
 
     popularityToDB.importToDB(itemList)
